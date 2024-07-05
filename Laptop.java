@@ -54,25 +54,25 @@ public class Laptop {
         " Цвет: " + Color;
     }
 
-    // @Override
-    // public boolean equals(Object obj) {
-    //     if (this == obj) {
-    //         return true;
-    //     }
-    //     if (obj == null || getClass() != obj.getClass()) {
-    //         return false;
-    //     }
-    //     Laptop laptop = (Laptop) obj;
-    //     return (Ram == laptop.Ram)
-    //     && (Hdd == laptop.Hdd)
-    //     && (OS.equals(laptop.OS))
-    //     && (Color.equals(laptop.Color));
-    // }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Laptop laptop = (Laptop) obj;
+        return (Ram == laptop.Ram)
+        && (Hdd == laptop.Hdd)
+        && (OS.equals(laptop.OS))
+        && (Color.equals(laptop.Color));
+    }
 
-    // @Override
-    // public int hashCode() {
+    @Override
+    public int hashCode() {
 
-    //     return Object.hash(Ram, Hdd, OS, Color);
-    // }
+        return Object.hash(Ram, Hdd, OS, Color);
+    }
 
 }
